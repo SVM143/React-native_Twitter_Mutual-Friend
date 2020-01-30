@@ -24,12 +24,10 @@ class Timeline extends Component {
   }
 
   lazyLoading(){
-    console.log("LLLLLLAAAAzzyzyzyzzyzy");
     this.props.getCategoriesList(this.state.screen_name1,this.props.screen_name2,true);
     this.setState({offset:false})
   }
   componentWillReceiveProps(props){
-    console.log("909090909",props);
     this.getData(props);
   }
 

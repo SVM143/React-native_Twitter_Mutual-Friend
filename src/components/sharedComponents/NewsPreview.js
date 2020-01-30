@@ -7,10 +7,9 @@ import {Constants} from "../../utils/constants"
 export class NewsPreview extends React.Component {
     constructor(props) {
         super(props)
-        console.log("2408957930248t53920148",props);
         this.state={
-          url: (this.props.previewLink.profile_image_url && 
-                this.props.previewLink.profile_image_url.replace("normal", "400x400")
+          url: (this.props.previewLink.profile_image_url_https && 
+                this.props.previewLink.profile_image_url_https.replace("normal", "400x400")
                 ||
                 Constants.placeholderUrl
               )
@@ -23,7 +22,7 @@ export class NewsPreview extends React.Component {
           style={{ paddingLeft: 10, paddingRight: 10, 
           paddingBottom: 2, height: 120, width: "100%"}}
           onPress={() => {
-            this.props.previewLink.url? openCustomTab(this.props.previewLink.url):null
+            // this.props.previewLink.url? openCustomTab(this.props.previewLink.url):null
          }}
           >
           <CardItem style={{

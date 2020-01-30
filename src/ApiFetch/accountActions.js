@@ -41,7 +41,6 @@ else{
   let mutualData = await mutualObj.mutualData;
   cursor1 = data1.data.next_cursor;
   cursor2 = data2.data.next_cursor;
-  console.log("wowowowwowowow",mutualData,cursor1,cursor2)
   if(mutualData.length < 1 && cursor1 > 0 && cursor2 > 0)
       return mutualData.concat(await mutualDataFind(screen_name1,screen_name2))
 
